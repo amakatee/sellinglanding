@@ -21,11 +21,16 @@ export default function Home(props) {
   if(isLoading) return <div>Loading...</div>
 
   return (
-    
-    <div  >
+    <>
+    {bannerData && 
+      <div  >
 
      ds{bannerData.secondText}
 
     </div>
+    }
+    </>
+    
+    
   )
 }
