@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import {useState} from 'react'
+export default function MyApp({ Component, pageProps }) {
+  const [queryClient] = useState(() => new QueryClient())
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <QueryClientProvider client={queryClient}>
+     
+        <Component {...pageProps} />
+      
+    </QueryClientProvider>
+  )
 }
-
-export default MyApp
