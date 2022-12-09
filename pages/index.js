@@ -7,7 +7,7 @@ export async function getStaticProps() {
   const bannerData = await getBannerData()
   return {
     props: {bannerData}, // will be passed to the page component as props
-    fallback: false
+   
   }
 }
 export default function Home(props) {
@@ -22,7 +22,8 @@ export default function Home(props) {
   return (
     
     <div  >
-     ds{bannerData.secondText}
+
+     ds{ bannerData ? bannerData.secondText : null}
 
     </div>
   )
