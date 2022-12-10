@@ -25,7 +25,7 @@ export default function Home(props) {
     {bannerData && 
       <div  >
 
-     ds{bannerData.secondText}
+     ds{props.bannerData.secondText}
 
     </div>
     }
